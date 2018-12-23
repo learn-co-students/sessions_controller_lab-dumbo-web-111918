@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  root 'application#hello'
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  post '/logout' => 'sessions#destroy'
-
+  #get '/', to: 'application#hello'
+   root 'application#hello'
+   get '/login', to: 'sessions#new'
+   #get '/login' => 'sessions#new'
+   post '/login' => 'sessions#create'
+   post '/logout' => 'sessions#destroy'
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -58,4 +60,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
